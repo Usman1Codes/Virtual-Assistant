@@ -1,0 +1,11 @@
+
+fastapi
+uvicorn[standard]
+python-dotenv
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+sqlalchemy
+python-multipart
+google-generativeai
+gspread
