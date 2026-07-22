@@ -1,0 +1,140 @@
+# Brainstorming the Project
+
+## What the project is?
+
+The main idea for this project to make personalize virtual asistant for  E-commerence bussiness, and it will handle all the customer
+queries and also update the changes if required in backend of the bussiness application or platform.
+
+Right now I am working on the email part to get Emails, send Emails integration and AI handling to answer the customer Emails. And after 
+compeltion of information required meaning conversation has ended between AI and customer, it reflects the action asked to perform to 
+google sheets.
+
+## What are goals?
+1- To able to get emails form user
+2- To able to send email to user
+2- To able evaluate material information from emails
+3- To able go back and forth in conversation with user to get required information
+4- To able to evaluate information based on pre defined parameters/input fields
+5- To able to create the entry on sheets with an ID 
+
+## Current Required Display Components
+
+1- First an input display for owner of bussiness.In this section owner will update its email address to be used for emails.
+Then to ask owner what information they need in order to set their Assistant. This will not be harcoded specially for bussiness 
+requirements. We will be providing owners a menu where they can add questions, required fields, and we will provide multiple option 
+to customize the assistant according to them. (Covering every aspect of a assistant's phycology and nature and persona).
+
+2- Then a second display where, we will be seeing all the conversation between user and Assistant. Emails from user, respones from Assistant, 
+response back from user, back and forth until we hit all requirenemtns and with confirmation mail from assistant it ends.
+
+## Implementation modules 
+
+1- Setting up user provided email address as a store mail address,to get emails and to send emails. How to do it with only the address (had to figure it out).
+2- Pipeline to extract text/information from email and sent to AI module and from AI module to mail address. 
+3- Core AI NLP Assistant module to do conservation and checking out required inputs field in order to generate reponses accordingly and to evalute the progress.  
+4- Proper handling of requirements and their fulfilling.
+5- Add the order/service all the information to google sheets.
+
+## Refined Module Breakdown
+
+Module 1: Business Owner Configuration System
+
+1.1 Email Configuration
+
+Email address validation and storage
+Email authentication setup (OAuth2)
+Connection testing functionality
+
+1.2 Assistant Customization Interface
+
+Dynamic form builder for custom questions
+Required fields definition system
+Assistant persona configuration (tone, response style, business context)
+Validation rules for each field type
+
+1.3 Configuration Storage
+
+Store business settings and assistant configuration
+Version control for configuration changes
+
+Module 2: Email Integration Pipeline
+2.1 Email Reception Handler
+
+IMAP/POP3 connection management
+Email parsing and content extraction
+Attachment handling (if needed)
+Email threading/conversation tracking
+
+2.2 Email Sending System
+
+SMTP connection management
+Email template system
+Response formatting and sending
+Delivery confirmation tracking
+
+Module 3: AI Conversation Engine
+3.1 Context Management
+
+Conversation state tracking
+Customer information accumulation
+Progress tracking against required fields
+
+3.2 Response Generation
+
+Natural language processing for customer queries
+Dynamic response generation based on missing information
+Confirmation and clarification handling
+
+3.3 Completion Detection
+
+Requirement fulfillment validation
+Final confirmation generation
+Conversation closure handling
+
+Module 4: Data Integration
+4.1 Google Sheets Integration
+
+Authentication and connection setup
+Dynamic sheet structure creation
+Data formatting and entry creation
+Unique ID generation system
+
+4.2 Data Validation
+
+Information completeness checking
+Data format validation
+Error handling and retry mechanisms
+
+Implementation Priority & Dependencies
+Phase 1: Foundation
+
+Module 1.1 - Email configuration
+Module 2.1 - Basic email reception
+Module 2.2 - Basic email sending
+
+Phase 2: Core Intelligence
+4. Module 1.2 - Assistant customization
+5. Module 3.1 - Context management
+6. Module 3.2 - Response generation
+Phase 3: Advanced Features
+7. Module 3.3 - Completion detection
+8. Module 4.1 - Google Sheets integration
+9. Module 1.3 & 4.2 - Data validation and storage
+Technical Considerations
+Email Authentication Options:
+
+Gmail: App passwords or OAuth2
+Business emails: SMTP/IMAP credentials
+Consider using services like SendGrid for better deliverability
+
+AI Integration:
+
+Use OpenAI API, Claude API, or similar for conversation handling
+Implement conversation memory management
+Consider rate limiting and cost optimization
+
+Data Structure:
+
+Design flexible schema for dynamic business requirements
+Plan for conversation history storage
+

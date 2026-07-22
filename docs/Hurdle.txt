@@ -1,0 +1,2 @@
+1- Must add test user for testing in autho2
+2- Must use https for real actions(currently local hosting allow to use http)
