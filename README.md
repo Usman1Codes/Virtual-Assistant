@@ -24,6 +24,12 @@ The system is comprised of a **React frontend** for configuration by the busines
 ### Customer Interaction & Data Entry Flow
 ![Customer Interaction & Data Entry Flow](docs/images/3.png)
 
+## 📸 Application Previews
+
+![Preview 1](docs/images/1.jpeg)
+![Preview 2](docs/images/2.jpeg)
+![Preview 3](docs/images/3.jpeg)
+
 ## 📂 Folder Structure
 
 ```text
